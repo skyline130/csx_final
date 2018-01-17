@@ -46,7 +46,7 @@ $(document).ready(function() {
 $(document).on('click', '#go_sched', function(e) {
     e.preventDefault();
     $.ajax({
-        url: "http://127.0.0.1:1377/query/query"
+        url: "https://csxfinal.herokuapp.com/query/query"
     }).done(function(data) {
         data = data.data;
         var mymodal = $('#modal_sched');

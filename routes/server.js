@@ -1,14 +1,11 @@
 var express = require('express');
 var router = express.Router();
 // const bodyParser = require('body-parser')
-const app = express()
 
 const MongoClient = require('mongodb').MongoClient
 const objectID = require('mongodb').ObjectID; // 用來建構MongoDBID物件
 // mongodb://ip:port/dbname
 var url = 'mongodb://140.112.28.194:27017/CSX2003_02_01';
-
-app.set('port', process.env.PORT || 1377)
 
 /* GET Mongo data. */
 /*http://localhost:3000/query/query*/
@@ -91,7 +88,3 @@ router.get('/query2', function(req, res, next) {
     })
 });
 module.exports = router;
-
-app.listen(app.get('port'), function(){
-    console.log('Server running at http://127.0.0.1:' + a00.get('port'))
-})

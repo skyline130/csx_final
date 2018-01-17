@@ -1,7 +1,7 @@
 $(document).on('click', '#go_realt', function(e) {
     e.preventDefault();
     $.ajax({
-        url: "http://127.0.0.1:1377/query/query2"
+        url: "https://csxfinal.herokuapp.com/query/query2"
     }).done(function(apple) {
         apple = apple.data;
         var myrealt = $('#modal_realt');
